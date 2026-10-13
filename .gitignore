@@ -1,0 +1,7 @@
+*.log
+ping.txt
+update-it-feed.ps1
+feed.xml
+it-feed.xml
+public/
+itfeed.exe
