@@ -1,6 +1,5 @@
-// A script which converts the Income Tax India latest news page into an
-// Atom feed.
-// License: GPLv3
+// Income Tax India Latest News -> Atom Feed
+// Source: https://www.incometax.gov.in/iec/foportal/latest-news
 
 import { Atom } from "jsr:@feed/feed";
 
@@ -8,9 +7,10 @@ const SOURCE_URL =
   "https://www.incometax.gov.in/iec/foportal/latest-news";
 
 const SITE_URL =
-  "https://www.incometax.gov.in/";
+  "https://www.incometax.gov.in/iec/foportal/latest-news";
 
 let fileName = "it-feed.xml";
+
 
 interface NewsItem {
   title: string;
@@ -20,113 +20,308 @@ interface NewsItem {
   description: string;
 }
 
+
 async function fetchPage(): Promise<string> {
-  console.info(`Fetching ${SOURCE_URL}`);
-  const r = await fetch(SOURCE_URL, {
+
+  console.log(`Fetching ${SOURCE_URL}`);
+
+  const response = await fetch(SOURCE_URL, {
+
     headers: {
+
       "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 Safari/537.36",
-      "Accept": "text/html",
-    },
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+
+      "Accept":
+        "text/html,application/xhtml+xml"
+
+    }
+
   });
 
-  if (!r.ok) {
-    throw new Error(`HTTP ${r.status}`);
+
+  if (!response.ok) {
+
+    throw new Error(
+      `HTTP ${response.status}`
+    );
+
   }
 
-  return await r.text();
+
+  return await response.text();
+
 }
+
+
+
+function cleanText(text:string){
+
+  return text
+    .replace(/\s+/g," ")
+    .trim();
+
+}
+
+
 
 function parseNews(html: string): NewsItem[] {
+
   const items: NewsItem[] = [];
-  const regex = /href="([^"]+)"[^>]*>([^<]+)<\/a>/g;
-  let match;
 
-  while ((match = regex.exec(html)) !== null) {
-    const title = match[2].trim();
 
-    if (title.length > 10) {
-      items.push({
-        title,
-        link: match[1].startsWith("http")
-          ? match[1]
-          : "https://www.incometax.gov.in" + match[1],
-        guid: match[1],
-        pubDate: new Date().toISOString(),
-        description: title,
-      });
+  // Split page by notification dates
+  const blocks =
+    html.split(/(?=\d{2}-[A-Za-z]{3}-\d{4})/g);
+
+
+  for (const block of blocks) {
+
+
+    const dateMatch =
+      block.match(
+        /^(\d{2}-[A-Za-z]{3}-\d{4})/
+      );
+
+
+    if (!dateMatch) {
+      continue;
     }
+
+
+    const date =
+      dateMatch[1];
+
+
+    const pdfMatch =
+      block.match(
+        /href="([^"]+\.pdf[^"]*)"/i
+      );
+
+
+    if (!pdfMatch) {
+      continue;
+    }
+
+
+    const link =
+      pdfMatch[1].startsWith("http")
+        ? pdfMatch[1]
+        : "https://www.incometax.gov.in" + pdfMatch[1];
+
+
+    // Remove HTML and extract text
+    let description =
+      block
+        .replace(/<script[\s\S]*?<\/script>/gi, "")
+        .replace(/<style[\s\S]*?<\/style>/gi, "")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/&nbsp;/g, " ")
+        .replace(/&amp;/g, "&")
+        .replace(/\s+/g, " ")
+        .trim();
+
+
+    // Remove date
+    description =
+      description.replace(date, "").trim();
+
+
+    // Remove Click here
+    description =
+      description.replace(/Click here/gi, "").trim();
+
+
+    if (description.length < 30) {
+      continue;
+    }
+
+
+    items.push({
+
+      title:
+        description.substring(0,150),
+
+      link,
+
+      guid:
+        link,
+
+      pubDate:
+        new Date(date).toISOString(),
+
+      description
+
+    });
+
+
   }
+
+
+  console.log(
+    "Parsed notifications:",
+    items.length
+  );
+
 
   return items;
+
 }
 
-// RSS uses RFC 822 dates, or ISO dates. Fall back to now if it cannot parse.
-function parseDate(s: string): Date {
-  const d = new Date(s);
-  return Number.isNaN(d.getTime()) ? new Date() : d;
+
+
+function parseDate(date:string){
+
+ const d=new Date(date);
+
+ return Number.isNaN(d.getTime())
+ ? new Date()
+ : d;
+
 }
 
-async function main() {
-  if (Deno.args.length >= 1) {
-    fileName = Deno.args[0];
-  }
 
-  let html: string;
-  try {
-    html = await fetchPage();
-  } catch (e) {
-    console.error(`Failed to fetch the page: ${e}`);
-    Deno.exit(1);
-  }
 
-  const items = parseNews(html);
-  if (items.length === 0) {
-    console.error("No notifications found in the feed; not overwriting file");
-    Deno.exit(1);
-  }
+async function main(){
 
-  console.info(`Generating feed with ${items.length} items ...`);
 
-  const atomFeed = new Atom({
-    title: "Income Tax Notifications",
-    description: "Notifications and circulars from the Income Tax India portal",
-    link: SITE_URL,
-    authors: [
-      {
-        name: "Income Tax India",
-        email: "test@example.org",
-      },
-    ],
-    updated: new Date(),
-    id: SITE_URL,
-  });
+ if(Deno.args.length>0){
 
-  const seen = new Set<string>();
-  for (const item of items) {
-    if (seen.has(item.guid)) continue;
-    seen.add(item.guid);
+   fileName=Deno.args[0];
 
-    atomFeed.addItem({
-      title: item.title,
-      link: item.link,
-      id: item.guid,
-      updated: parseDate(item.pubDate),
-      summary: item.title,
-      content: {
-        body: item.description,
-        type: "html",
-      },
-    });
-  }
+ }
 
-  try {
-    Deno.writeTextFileSync(fileName, atomFeed.build());
-    console.log(`Saved to ${fileName}`);
-  } catch (e) {
-    console.error(`failed to save file: ${fileName}\n${e}`);
-    Deno.exit(1);
-  }
+
+
+ let html="";
+
+
+ try{
+
+   html=await fetchPage();
+
+ }
+
+ catch(error){
+
+   console.error(
+     "Fetch failed:",
+     error
+   );
+
+   Deno.exit(1);
+
+ }
+
+
+
+ const news=parseNews(html);
+
+
+
+ if(news.length===0){
+
+   console.error(
+     "No latest news found"
+   );
+
+   Deno.exit(1);
+
+ }
+
+
+
+ console.log(
+   `Generating feed with ${news.length} items`
+ );
+
+
+
+ const feed=new Atom({
+
+   title:
+   "Income Tax Latest News",
+
+   description:
+   "Latest notifications from Income Tax India",
+
+   link:SITE_URL,
+
+   id:SITE_URL,
+
+   authors:[{
+
+     name:
+     "Income Tax India",
+
+     email:
+     "test@example.org"
+
+   }],
+
+   updated:
+   new Date()
+
+ });
+
+
+
+ const seen=new Set<string>();
+
+
+ for(const item of news){
+
+
+   if(seen.has(item.guid))
+     continue;
+
+
+   seen.add(item.guid);
+
+
+
+   feed.addItem({
+
+     title:item.title,
+
+     link:item.link,
+
+     id:item.guid,
+
+     updated:
+     parseDate(item.pubDate),
+
+     summary:
+     item.title,
+
+     content:{
+
+       body:item.description,
+
+       type:"html"
+
+     }
+
+   });
+
+
+ }
+
+
+
+ Deno.writeTextFileSync(
+   fileName,
+   feed.build()
+ );
+
+
+ console.log(
+   `Saved ${fileName}`
+ );
+
+
 }
+
+
 
 await main();
