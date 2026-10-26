@@ -6,7 +6,7 @@ which can then be used in feed readers, bots, and automation tools such as
 Power Automate or Microsoft Teams.
 
 Source feed:
-[https://www.incometaxindia.gov.in/notification-rss-feed/-/asset_publisher/bxhj/rss](https://www.incometaxindia.gov.in/notification-rss-feed/-/asset_publisher/bxhj/rss)
+[https://www.incometax.gov.in/iec/foportal/latest-news](https://www.incometax.gov.in/iec/foportal/latest-news)
 
 # Installation
 
