@@ -5,7 +5,7 @@
 import { Atom } from "jsr:@feed/feed";
 
 const SOURCE_URL =
-  "https://www.incometaxindia.gov.in/notification-rss-feed/-/asset_publisher/bxhj/rss";
+  "https://www.incometax.gov.in/iec/foportal/latest-news";
 const SITE_URL = "https://www.incometaxindia.gov.in/";
 
 let fileName = "feed.xml";
