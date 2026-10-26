@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Income Tax Notifications</title>
+  <subtitle>Notifications and circulars from the Income Tax India portal</subtitle>
+  <link rel="alternate" href="https://www.incometax.gov.in/"/>
+  <updated>2026-10-26T11:07:49.935Z</updated>
+  <generator>Feed for Deno</generator>
+  <author>
+    <name>Income Tax India</name>
+    <email>test@example.org</email>
+  </author>
+  <entry>
+    <title>Skip to main content</title>
+    <link href="https://www.incometax.gov.in#main-content"/>
+    <id>#main-content</id>
+    <updated>2026-10-26T11:07:49.929Z</updated>
+    <summary>Skip to main content</summary>
+    <content type="html">Skip to main content</content>
+  </entry>
+  <entry>
+    <title>Individual/HUF</title>
+    <link href="https://www.incometax.gov.in#/"/>
+    <id>#/</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Individual/HUF</summary>
+    <content type="html">Individual/HUF</content>
+  </entry>
+  <entry>
+    <title>Guidance to file Tax Return</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/all-topics/tax-payer/individual/how-to-file-tax-returns"/>
+    <id>/iec/foportal/help/all-topics/tax-payer/individual/how-to-file-tax-returns</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Guidance to file Tax Return</summary>
+    <content type="html">Guidance to file Tax Return</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1#returnsandforms"/>
+    <id>/iec/foportal/help/individual/return-applicable-1#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1#taxdeductions"/>
+    <id>/iec/foportal/help/individual/return-applicable-1#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Assisted filing</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/assissted-filing"/>
+    <id>/iec/foportal/help/assissted-filing</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Assisted filing</summary>
+    <content type="html">Assisted filing</content>
+  </entry>
+  <entry>
+    <title>Guidance to file Tax Return</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/all-topics/tax-payer/individual/business-professional/how-to-file-tax-returns"/>
+    <id>/iec/foportal/help/all-topics/tax-payer/individual/business-professional/how-to-file-tax-returns</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Guidance to file Tax Return</summary>
+    <content type="html">Guidance to file Tax Return</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual-business-profession#returnsandforms"/>
+    <id>/iec/foportal/help/individual-business-profession#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual-business-profession#taxdeductions"/>
+    <id>/iec/foportal/help/individual-business-profession#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Guidance to file Tax Return</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/all-topics/tax-payer/individual/senior-and-super-senior-citizens/how-to-file-tax-returns"/>
+    <id>/iec/foportal/help/all-topics/tax-payer/individual/senior-and-super-senior-citizens/how-to-file-tax-returns</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Guidance to file Tax Return</summary>
+    <content type="html">Guidance to file Tax Return</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-2#returnsandforms"/>
+    <id>/iec/foportal/help/individual/return-applicable-2#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-2#taxdeductions"/>
+    <id>/iec/foportal/help/individual/return-applicable-2#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Guidance to file Tax Return</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/all-topics/tax-payer/individual/non-resident/how-to-file-tax-returns"/>
+    <id>/iec/foportal/help/all-topics/tax-payer/individual/non-resident/how-to-file-tax-returns</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Guidance to file Tax Return</summary>
+    <content type="html">Guidance to file Tax Return</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-0#returnsandforms"/>
+    <id>/iec/foportal/help/individual/return-applicable-0#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-0#taxdeductions"/>
+    <id>/iec/foportal/help/individual/return-applicable-0#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Guidance to file Tax Return</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/huf/how-to-file-tax-returns"/>
+    <id>/iec/foportal/help/huf/how-to-file-tax-returns</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Guidance to file Tax Return</summary>
+    <content type="html">Guidance to file Tax Return</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable#returnsandforms"/>
+    <id>/iec/foportal/help/individual/return-applicable#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable#taxdeductions"/>
+    <id>/iec/foportal/help/individual/return-applicable#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/company/return-applicable#returnsandforms"/>
+    <id>/iec/foportal/help/company/return-applicable#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/company/return-applicable#taxdeductions"/>
+    <id>/iec/foportal/help/company/return-applicable#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/company/return-applicable-0#returnsandforms"/>
+    <id>/iec/foportal/help/company/return-applicable-0#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/company/return-applicable-0#taxdeductions"/>
+    <id>/iec/foportal/help/company/return-applicable-0#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/non-company/return-applicable-0#returnsandforms"/>
+    <id>/iec/foportal/help/non-company/return-applicable-0#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/non-company/return-applicable-0#taxdeductions"/>
+    <id>/iec/foportal/help/non-company/return-applicable-0#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Guidance to file Tax Return</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/firm-llp/how-to-file-tax-returns"/>
+    <id>/iec/foportal/help/firm-llp/how-to-file-tax-returns</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Guidance to file Tax Return</summary>
+    <content type="html">Guidance to file Tax Return</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/partnership-firm-llp#returnsandforms"/>
+    <id>/iec/foportal/help/partnership-firm-llp#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/partnership-firm-llp#taxdeductions"/>
+    <id>/iec/foportal/help/partnership-firm-llp#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Return / Forms applicable to me</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/non-company/return-applicable#returnsandforms"/>
+    <id>/iec/foportal/help/non-company/return-applicable#returnsandforms</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Return / Forms applicable to me</summary>
+    <content type="html">Return / Forms applicable to me</content>
+  </entry>
+  <entry>
+    <title>Deductions on which I can get tax benefit</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/non-company/return-applicable#taxdeductions"/>
+    <id>/iec/foportal/help/non-company/return-applicable#taxdeductions</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Deductions on which I can get tax benefit</summary>
+    <content type="html">Deductions on which I can get tax benefit</content>
+  </entry>
+  <entry>
+    <title>Registration</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/ca/registration"/>
+    <id>/iec/foportal/help/ca/registration</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Registration</summary>
+    <content type="html">Registration</content>
+  </entry>
+  <entry>
+    <title>Service Available</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/ca/servicesavailable"/>
+    <id>/iec/foportal/help/ca/servicesavailable</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Service Available</summary>
+    <content type="html">Service Available</content>
+  </entry>
+  <entry>
+    <title>API Specifications</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/api-specifications"/>
+    <id>/iec/foportal/api-specifications</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>API Specifications</summary>
+    <content type="html">API Specifications</content>
+  </entry>
+  <entry>
+    <title>Central &amp;amp; State Government Department/Approved Undertaking Agency</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/central-state-government-approved-undertaking-agency"/>
+    <id>/iec/foportal/central-state-government-approved-undertaking-agency</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Central &amp;amp; State Government Department/Approved Undertaking Agency</summary>
+    <content type="html">Central &amp;amp; State Government Department/Approved Undertaking Agency</content>
+  </entry>
+  <entry>
+    <title>RBI Approved Banks</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/rbi-approved-banks"/>
+    <id>/iec/foportal/rbi-approved-banks</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>RBI Approved Banks</summary>
+    <content type="html">RBI Approved Banks</content>
+  </entry>
+  <entry>
+    <title>Registration</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/taxdeductor/registration"/>
+    <id>/iec/foportal/help/taxdeductor/registration</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Registration</summary>
+    <content type="html">Registration</content>
+  </entry>
+  <entry>
+    <title>Service Available</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/help/taxdeductor/servicesavailable"/>
+    <id>/iec/foportal/help/taxdeductor/servicesavailable</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Service Available</summary>
+    <content type="html">Service Available</content>
+  </entry>
+  <entry>
+    <title>Latest News</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/latest-news"/>
+    <id>/iec/foportal/latest-news</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Latest News</summary>
+    <content type="html">Latest News</content>
+  </entry>
+  <entry>
+    <title>About the Portal</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/about-portal"/>
+    <id>/iec/foportal/about-portal</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>About the Portal</summary>
+    <content type="html">About the Portal</content>
+  </entry>
+  <entry>
+    <title>History of Direct Taxation</title>
+    <link href="https://www.incometaxindia.gov.in/history-of-direct-taxation"/>
+    <id>https://www.incometaxindia.gov.in/history-of-direct-taxation</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>History of Direct Taxation</summary>
+    <content type="html">History of Direct Taxation</content>
+  </entry>
+  <entry>
+    <title>Vision, Mission, Values</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/sites/default/files/2020-02/vision-mission-values-2020-07012011.pdf"/>
+    <id>/iec/foportal/sites/default/files/2020-02/vision-mission-values-2020-07012011.pdf</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Vision, Mission, Values</summary>
+    <content type="html">Vision, Mission, Values</content>
+  </entry>
+  <entry>
+    <title>Vision, Mission, Values (Hindi)</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/sites/default/files/2022-11/Vision-Mission-Document-Hindi.pdf"/>
+    <id>/iec/foportal/sites/default/files/2022-11/Vision-Mission-Document-Hindi.pdf</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Vision, Mission, Values (Hindi)</summary>
+    <content type="html">Vision, Mission, Values (Hindi)</content>
+  </entry>
+  <entry>
+    <title>Right to Information</title>
+    <link href="https://www.incometaxindia.gov.in/right-to-information"/>
+    <id>https://www.incometaxindia.gov.in/right-to-information</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Right to Information</summary>
+    <content type="html">Right to Information</content>
+  </entry>
+  <entry>
+    <title>Organization &amp;amp; Functions</title>
+    <link href="https://www.incometaxindia.gov.in/cbdt"/>
+    <id>https://www.incometaxindia.gov.in/cbdt</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Organization &amp;amp; Functions</summary>
+    <content type="html">Organization &amp;amp; Functions</content>
+  </entry>
+  <entry>
+    <title>e-Filing Calendar 2026</title>
+    <link href="https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calender"/>
+    <id>https://eportal.incometax.gov.in/iec/foservices/#/TaxCalc/calender</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>e-Filing Calendar 2026</summary>
+    <content type="html">e-Filing Calendar 2026</content>
+  </entry>
+  <entry>
+    <title>Tax Payer Charter</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/sites/default/files/2024-04/taxpayer-charter-english.pdf"/>
+    <id>/iec/foportal/sites/default/files/2024-04/taxpayer-charter-english.pdf</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Tax Payer Charter</summary>
+    <content type="html">Tax Payer Charter</content>
+  </entry>
+  <entry>
+    <title>Tax Payer Charter (Hindi)</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/sites/default/files/2022-11/TAXPAYERS-CHARTER-hindi.pdf"/>
+    <id>/iec/foportal/sites/default/files/2022-11/TAXPAYERS-CHARTER-hindi.pdf</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Tax Payer Charter (Hindi)</summary>
+    <content type="html">Tax Payer Charter (Hindi)</content>
+  </entry>
+  <entry>
+    <title>Helpdesk Numbers</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/contact-us"/>
+    <id>/iec/foportal/contact-us</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Helpdesk Numbers</summary>
+    <content type="html">Helpdesk Numbers</content>
+  </entry>
+  <entry>
+    <title>View Grievance</title>
+    <link href="https://eportal.incometax.gov.in/iec/foservices/#/fo-greivance/view"/>
+    <id>https://eportal.incometax.gov.in/iec/foservices/#/fo-greivance/view</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>View Grievance</summary>
+    <content type="html">View Grievance</content>
+  </entry>
+  <entry>
+    <title>Website Policies</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/using-the-portal/webSitePolicies"/>
+    <id>/iec/foportal/using-the-portal/webSitePolicies</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Website Policies</summary>
+    <content type="html">Website Policies</content>
+  </entry>
+  <entry>
+    <title>Accessibility Statement</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/using-the-portal/accessibility-statement"/>
+    <id>/iec/foportal/using-the-portal/accessibility-statement</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Accessibility Statement</summary>
+    <content type="html">Accessibility Statement</content>
+  </entry>
+  <entry>
+    <title>Browser Support</title>
+    <link href="https://www.incometax.gov.in/iec/foportal/using-the-portal/browser-support"/>
+    <id>/iec/foportal/using-the-portal/browser-support</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Browser Support</summary>
+    <content type="html">Browser Support</content>
+  </entry>
+  <entry>
+    <title>Income Tax India</title>
+    <link href="https://www.incometaxindia.gov.in/Pages/default.aspx"/>
+    <id>https://www.incometaxindia.gov.in/Pages/default.aspx</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Income Tax India</summary>
+    <content type="html">Income Tax India</content>
+  </entry>
+  <entry>
+    <title>Protean (previously NSDL)</title>
+    <link href="https://www.protean-tinpan.com"/>
+    <id>https://www.protean-tinpan.com</id>
+    <updated>2026-10-26T11:07:49.934Z</updated>
+    <summary>Protean (previously NSDL)</summary>
+    <content type="html">Protean (previously NSDL)</content>
+  </entry>
+</feed>

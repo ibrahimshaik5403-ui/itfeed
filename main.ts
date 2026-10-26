@@ -1,4 +1,4 @@
-// A script which converts the Income Tax India notification RSS feed into an
+// A script which converts the Income Tax India latest news page into an
 // Atom feed.
 // License: GPLv3
 
@@ -6,11 +6,13 @@ import { Atom } from "jsr:@feed/feed";
 
 const SOURCE_URL =
   "https://www.incometax.gov.in/iec/foportal/latest-news";
-const SITE_URL = "https://www.incometaxindia.gov.in/";
 
-let fileName = "feed.xml";
+const SITE_URL =
+  "https://www.incometax.gov.in/";
 
-interface RssItem {
+let fileName = "it-feed.xml";
+
+interface NewsItem {
   title: string;
   link: string;
   guid: string;
@@ -18,60 +20,51 @@ interface RssItem {
   description: string;
 }
 
-// Decode the XML entities used in RSS text and unwrap CDATA sections.
-function decodeText(s: string): string {
-  return s
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&amp;/g, "&")
-    .trim();
-}
-
-// Return the text content of the first <name> element inside a block.
-function field(block: string, name: string): string {
-  const m = block.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`));
-  return m ? decodeText(m[1]) : "";
-}
-
-// Regex based parsing keeps this free of browser-only APIs such as DOMParser.
-function parseItems(xml: string): RssItem[] {
-  const blocks = xml.match(/<item[\s>][\s\S]*?<\/item>/g) ?? [];
-  return blocks.map((b) => {
-    const link = field(b, "link");
-    return {
-      title: field(b, "title"),
-      link,
-      guid: field(b, "guid") || link,
-      pubDate: field(b, "pubDate"),
-      description: field(b, "description"),
-    };
-  });
-}
-
-// RSS uses RFC 822 dates, which Date can parse. Fall back to now if it cannot.
-function parseDate(s: string): Date {
-  const d = new Date(s);
-  return Number.isNaN(d.getTime()) ? new Date() : d;
-}
-
-async function fetchXml(): Promise<string> {
-  console.info(`Fetching notifications from ${SOURCE_URL}`);
+async function fetchPage(): Promise<string> {
+  console.info(`Fetching ${SOURCE_URL}`);
   const r = await fetch(SOURCE_URL, {
     headers: {
       "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-      Accept: "application/rss+xml, application/xml;q=0.9, */*;q=0.8",
-      "Accept-Language": "en-US,en;q=0.9",
-      Referer: "https://www.incometaxindia.gov.in/",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 Safari/537.36",
+      "Accept": "text/html",
     },
   });
+
   if (!r.ok) {
-    throw new Error(`HTTP ${r.status} ${r.statusText}`);
+    throw new Error(`HTTP ${r.status}`);
   }
+
   return await r.text();
+}
+
+function parseNews(html: string): NewsItem[] {
+  const items: NewsItem[] = [];
+  const regex = /href="([^"]+)"[^>]*>([^<]+)<\/a>/g;
+  let match;
+
+  while ((match = regex.exec(html)) !== null) {
+    const title = match[2].trim();
+
+    if (title.length > 10) {
+      items.push({
+        title,
+        link: match[1].startsWith("http")
+          ? match[1]
+          : "https://www.incometax.gov.in" + match[1],
+        guid: match[1],
+        pubDate: new Date().toISOString(),
+        description: title,
+      });
+    }
+  }
+
+  return items;
+}
+
+// RSS uses RFC 822 dates, or ISO dates. Fall back to now if it cannot parse.
+function parseDate(s: string): Date {
+  const d = new Date(s);
+  return Number.isNaN(d.getTime()) ? new Date() : d;
 }
 
 async function main() {
@@ -79,15 +72,15 @@ async function main() {
     fileName = Deno.args[0];
   }
 
-  let xml: string;
+  let html: string;
   try {
-    xml = await fetchXml();
+    html = await fetchPage();
   } catch (e) {
-    console.error(`Failed to fetch the feed: ${e}`);
+    console.error(`Failed to fetch the page: ${e}`);
     Deno.exit(1);
   }
 
-  const items = parseItems(xml);
+  const items = parseNews(html);
   if (items.length === 0) {
     console.error("No notifications found in the feed; not overwriting file");
     Deno.exit(1);
