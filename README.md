@@ -1,15 +1,23 @@
 # itfeed
 
-A simple tool which converts the notifications published on the Income Tax India
-portal (`incometaxindia.gov.in`) from its official RSS feed into an Atom feed,
-which can then be used in feed readers, bots, and automation tools such as
-Power Automate or Microsoft Teams.
+A tool that creates a custom Atom feed from Income Tax India latest updates.
 
-Feed URL (updated manually):
-[https://ibrahimshaik5403-ui.github.io/itfeed/it-feed.xml](https://ibrahimshaik5403-ui.github.io/itfeed/it-feed.xml)
+The generated feed can be used with:
 
-Source feed:
-[ https://www.incometax.gov.in/iec/foportal/latest-news]( https://www.incometax.gov.in/iec/foportal/latest-news)
+- RSS/feed readers
+- Bots
+- Power Automate
+- Microsoft Teams notifications
+
+## Feed URL
+
+https://ibrahimshaik5403-ui.github.io/itfeed/it-feed.xml
+
+## Source Website
+
+Income Tax India Latest News:
+
+https://www.incometax.gov.in/iec/foportal/latest-news
 
 # Installation
 
